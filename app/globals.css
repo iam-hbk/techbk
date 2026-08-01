@@ -176,6 +176,23 @@
   }
 }
 
+@media (prefers-reduced-motion: reduce) and (min-width: 1024px) {
+  .climax-sequence {
+    display: none;
+  }
+  .climax-burst-circle {
+    transform: scale(1.45);
+  }
+  .climax-final {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .climax-final [data-climax-particles] {
+    opacity: 0.32 !important;
+    transform: none !important;
+  }
+}
+
 /* Skip link */
 .skip-link {
   position: fixed;
