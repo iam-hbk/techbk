@@ -2,6 +2,9 @@ export type Service = {
   index: string;
   slug: string;
   title: string;
+  compactTitle: string;
+  preview: string;
+  highlights: string[];
   summary: string;
   items: string[];
 };
@@ -11,6 +14,10 @@ export const services: Service[] = [
     index: "01",
     slug: "discovery-and-strategy",
     title: "Discovery and Strategy",
+    compactTitle: "Discovery & Strategy",
+    preview:
+      "Clarify the problem, constraints and practical route before anyone starts building.",
+    highlights: ["Requirements definition", "Technical audits", "Delivery roadmaps"],
     summary:
       "Before anyone starts building, we clarify the problem, the people involved and the constraints. You get agreed requirements and a practical delivery plan.",
     items: [
@@ -27,6 +34,10 @@ export const services: Service[] = [
     index: "02",
     slug: "product-and-experience-design",
     title: "Product and Experience Design",
+    compactTitle: "Product Design",
+    preview:
+      "Make key journeys and interfaces visible while changes are still inexpensive.",
+    highlights: ["User flows", "Interactive prototypes", "Design systems"],
     summary:
       "See how the product will work before development begins. We map the main journeys, test the structure and design the interfaces while changes are still inexpensive.",
     items: [
@@ -43,6 +54,10 @@ export const services: Service[] = [
     index: "03",
     slug: "software-development",
     title: "Software Development",
+    compactTitle: "Development",
+    preview:
+      "Turn agreed requirements into websites, applications and internal tools.",
+    highlights: ["Web applications", "Internal tools", "APIs and integrations"],
     summary:
       "We build public websites, web applications, internal tools and the services behind them. You see working software throughout the project, not only at the end.",
     items: [
@@ -61,6 +76,10 @@ export const services: Service[] = [
     index: "04",
     slug: "infrastructure-and-delivery",
     title: "Infrastructure and Delivery",
+    compactTitle: "Infrastructure",
+    preview:
+      "Set up repeatable hosting, deployments and monitoring for confident releases.",
+    highlights: ["Cloud infrastructure", "CI/CD", "Performance optimisation"],
     summary:
       "We set up hosting, deployments and monitoring so releases are repeatable and problems are easier to spot.",
     items: [
@@ -76,6 +95,10 @@ export const services: Service[] = [
     index: "05",
     slug: "improvement-and-maintenance",
     title: "Improvement and Maintenance",
+    compactTitle: "Maintenance",
+    preview:
+      "Keep live software secure, useful and improving as the organisation changes.",
+    highlights: ["Feature development", "Bug fixing", "Security improvements"],
     summary:
       "Live software needs regular attention. We fix problems, ship improvements and keep products useful as the organisation changes.",
     items: [

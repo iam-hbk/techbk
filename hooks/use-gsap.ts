@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useLayoutEffect, useRef } from "react";
 import { gsap, ScrollTrigger } from "@/components/lenis-provider";
 
 /**
@@ -14,7 +14,7 @@ export function useGsapScene<T extends HTMLElement>(
 ) {
   const ref = useRef<T>(null);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const scope = ref.current;
     if (!scope) return;
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;

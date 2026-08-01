@@ -1,10 +1,9 @@
 import Link from "next/link";
-import { IconArrowRight, IconArrowUpRight } from "@tabler/icons-react";
-import { services } from "@/lib/services";
+import { IconArrowUpRight } from "@tabler/icons-react";
+import { ServicesSwitchboard } from "@/components/home/services-switchboard";
 
 /**
- * 03 — SERVICES. Lifecycle stages as connected editorial rows.
- * Full detail lives on /services.
+ * 03 — SERVICES. Interactive service selector; full detail lives on /services.
  */
 export function ServicesPreview() {
   return (
@@ -20,45 +19,22 @@ export function ServicesPreview() {
               id="services-heading"
               className="display-crop font-display text-4xl font-bold uppercase tracking-tight sm:text-5xl lg:text-6xl"
             >
-              Help at every stage.
+              What do you need next?
             </h2>
           </div>
           <p className="max-w-md text-base leading-relaxed text-ink/70 md:justify-self-end">
-            Bring us in for one piece of work or keep the same team from early
-            discovery through maintenance.
+            Pick the closest service to see how we can help, or keep the same
+            team from discovery through maintenance.
           </p>
         </div>
 
-        <ol className="mt-14">
-          {services.map((service) => (
-            <li key={service.slug} className="group border-t border-ink/15 last:border-b">
-              <Link
-                href={`/services#${service.slug}`}
-                className="grid gap-3 py-6 outline-offset-4 transition-colors md:grid-cols-[4rem_1fr_1.2fr_2rem] md:items-baseline md:gap-6 md:py-8"
-              >
-                <span className="label-tech tabular text-cobalt">
-                  {service.index}
-                </span>
-                <h3 className="font-display text-2xl font-bold uppercase tracking-tight transition-colors group-hover:text-cobalt sm:text-3xl">
-                  {service.title}
-                </h3>
-                <p className="max-w-xl text-sm leading-relaxed text-ink/70">
-                  {service.summary}
-                </p>
-                <IconArrowRight
-                  aria-hidden="true"
-                  className="hidden size-5 -translate-x-1 text-cobalt opacity-0 transition-all group-hover:translate-x-0 group-hover:opacity-100 md:block"
-                />
-              </Link>
-            </li>
-          ))}
-        </ol>
+        <ServicesSwitchboard />
 
         <Link
           href="/services"
-          className="label-tech mt-8 inline-flex items-center gap-2 text-cobalt outline-offset-4 hover:underline"
+          className="label-tech mt-8 inline-flex min-h-11 items-center gap-2 text-cobalt outline-offset-4 hover:underline"
         >
-          See all services
+          Explore all service details
           <IconArrowUpRight className="size-4" aria-hidden="true" />
         </Link>
       </div>

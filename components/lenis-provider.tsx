@@ -49,10 +49,27 @@ export function LenisProvider({ children }: { children: React.ReactNode }) {
     };
   }, []);
 
-  // Recalculate scroll-driven timelines on navigation.
+  // Recalculate scroll-driven timelines and preserve fragment navigation.
   useEffect(() => {
-    window.__lenis?.scrollTo(0, { immediate: true });
-    const id = requestAnimationFrame(() => ScrollTrigger.refresh());
+    const id = requestAnimationFrame(() => {
+      const hash = decodeURIComponent(window.location.hash.slice(1));
+      const target = hash ? document.getElementById(hash) : null;
+
+      if (target) {
+        if (window.__lenis) {
+          window.__lenis.scrollTo(target, { immediate: true });
+        } else {
+          target.scrollIntoView();
+        }
+      } else if (window.__lenis) {
+        window.__lenis.scrollTo(0, { immediate: true });
+      } else {
+        window.scrollTo({ top: 0 });
+      }
+
+      ScrollTrigger.refresh();
+    });
+
     return () => cancelAnimationFrame(id);
   }, [pathname]);
 
