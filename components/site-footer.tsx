@@ -28,7 +28,7 @@ export function SiteFooter() {
               {site.footerTagline}
             </p>
             <p className="label-tech text-structure">
-              Remote + on-site — {site.footprint}
+              Remote + on-site / {site.footprint}
             </p>
           </div>
 

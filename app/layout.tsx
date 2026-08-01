@@ -28,8 +28,8 @@ const mono = IBM_Plex_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: "TecHBK — Software Development Consulting",
-    template: "%s — TecHBK",
+    default: "TecHBK | Software Development Consultancy",
+    template: "%s | TecHBK",
   },
   description: site.description,
   alternates: { canonical: "/" },
@@ -43,12 +43,12 @@ export const metadata: Metadata = {
     type: "website",
     url: site.url,
     siteName: site.name,
-    title: "TecHBK — Software Development Consulting",
+    title: "TecHBK | Software Development Consultancy",
     description: site.description,
   },
   twitter: {
     card: "summary_large_image",
-    title: "TecHBK — Software Development Consulting",
+    title: "TecHBK | Software Development Consultancy",
     description: site.description,
   },
 };

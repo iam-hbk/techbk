@@ -20,12 +20,12 @@ export function ServicesPreview() {
               id="services-heading"
               className="display-crop font-display text-4xl font-bold uppercase tracking-tight sm:text-5xl lg:text-6xl"
             >
-              One system, five stages.
+              Help at every stage.
             </h2>
           </div>
           <p className="max-w-md text-base leading-relaxed text-ink/70 md:justify-self-end">
-            Our services follow the software lifecycle. Engage us for one
-            stage, or for the whole path from discovery to maintenance.
+            Bring us in for one piece of work or keep the same team from early
+            discovery through maintenance.
           </p>
         </div>
 
@@ -58,7 +58,7 @@ export function ServicesPreview() {
           href="/services"
           className="label-tech mt-8 inline-flex items-center gap-2 text-cobalt outline-offset-4 hover:underline"
         >
-          Full service detail
+          See all services
           <IconArrowUpRight className="size-4" aria-hidden="true" />
         </Link>
       </div>

@@ -8,7 +8,7 @@ import { caseStudies } from "@/lib/work";
 export const metadata: Metadata = {
   title: "Work",
   description:
-    "Client-approved case studies: websites, operational dashboards, and software platforms built and maintained by TecHBK.",
+    "Client-approved case studies covering websites, operational dashboards and software platforms built and maintained by TecHBK.",
   alternates: { canonical: "/work" },
 };
 
@@ -17,8 +17,8 @@ export default function WorkPage() {
     <>
       <PageHeader
         label="Work"
-        title="Systems in daily operation."
-        description="Every project below is published with client approval. The range — energy, recruitment, architecture, construction, security, nonprofit, supply, and higher education — is the point: we adapt to the organization, not the other way around."
+        title="Selected client work."
+        description="These case studies are published with client approval. They cover websites, operational tools and software platforms used across several industries."
       />
 
       <div className="bg-paper text-ink">

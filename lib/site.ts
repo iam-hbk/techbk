@@ -3,15 +3,15 @@ export const site = {
   legalName: "TecHBK",
   url: "https://techbk.dev",
   description:
-    "TecHBK is a software development consulting business helping organizations plan, build, improve, and maintain dependable software — from South Africa and the DRC to the world.",
+    "TecHBK is a software development consultancy in South Africa and the DRC. We design, build and maintain software for organisations worldwide.",
   email: "info@techbk.dev",
   emailHref:
-    "mailto:info@techbk.dev?subject=New%20project%20inquiry",
+    "mailto:info@techbk.dev?subject=New%20project%20enquiry",
   phone: "+27 64 244 8112",
   phoneHref: "tel:+27642448112",
   whatsapp: "https://wa.me/27642448112",
   footerTagline:
-    "Software development consulting — from first decision to daily operation.",
+    "Software consulting for new builds, existing products and long-term maintenance.",
   footprint: "South Africa / DRC / Global",
   availability: "Currently available for new projects",
   founder: {

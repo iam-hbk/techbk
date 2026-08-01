@@ -17,15 +17,15 @@ export function FinalCta() {
           id="cta-heading"
           className="display-crop mt-6 font-display text-[13vw] font-bold uppercase tracking-tight sm:text-[10vw] lg:text-[7.5vw]"
         >
-          What are you
+          Tell us what
           <br />
-          trying to build?
+          needs work.
         </h2>
 
         <div className="mt-12 flex flex-col gap-10 border-t border-white/10 pt-10 md:flex-row md:items-end md:justify-between">
           <p className="max-w-md text-lg leading-relaxed text-paper/80">
-            Tell us what you are planning, what is not working, or where your
-            current software needs help.
+            Tell us what you are planning or what is not working. We will reply
+            by email and help you find a sensible starting point.
           </p>
           <div className="flex flex-wrap items-center gap-3">
             <Button asChild size="lg">

@@ -10,7 +10,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "Discovery and strategy, product and experience design, software development, infrastructure and delivery, and ongoing improvement and maintenance.",
+    "Software discovery, product design, development, infrastructure and long-term maintenance from TecHBK.",
   alternates: { canonical: "/services" },
 };
 
@@ -19,8 +19,8 @@ export default function ServicesPage() {
     <>
       <PageHeader
         label="Services"
-        title="The full software lifecycle."
-        description="TecHBK contributes at any stage — from the first conversation about an idea to the daily operation of a live system. Engage us for one stage or for the whole path."
+        title="Choose the help you need."
+        description="Some clients need a product built from scratch. Others need an audit, a redesign, a reliable release process or continued maintenance. We can take on a focused brief or stay with the project longer."
       />
 
       <div className="bg-paper text-ink">
@@ -73,11 +73,11 @@ export default function ServicesPage() {
                 id="services-cta"
                 className="display-crop font-display text-3xl font-bold uppercase tracking-tight sm:text-4xl"
               >
-                Not sure which stage you are at?
+                Not sure where to start?
               </h2>
               <p className="mt-4 max-w-md text-base leading-relaxed text-ink/70">
-                Describe the situation as it is. We will help you work out
-                where the work starts.
+                Describe what you have and what needs to change. We will help
+                you choose a sensible first step.
               </p>
             </div>
             <div className="flex flex-wrap gap-3">

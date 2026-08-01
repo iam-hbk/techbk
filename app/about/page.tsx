@@ -10,26 +10,26 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "TecHBK is a software development consulting business led by founder Heritier Kaumbu, working remotely and on-site from South Africa and the DRC to the world.",
+    "TecHBK is a founder-led software development consultancy working with organisations in South Africa, the DRC and elsewhere.",
   alternates: { canonical: "/about" },
 };
 
 const workingPrinciples = [
   {
-    title: "We work where you work",
-    body: "Remote by default, on-site when the work calls for it. Our clients are in South Africa, the Democratic Republic of Congo, and beyond.",
+    title: "Remote or on-site",
+    body: "We usually work remotely and join clients on-site when the project benefits from it. Our clients are in South Africa, the Democratic Republic of the Congo and elsewhere.",
   },
   {
-    title: "We build in reviewable increments",
+    title: "Working software you can review",
     body: "You see working software early and often, not a reveal at the end. Decisions stay reversible for as long as possible.",
   },
   {
-    title: "We communicate in plain language",
-    body: "Technical decisions are explained in terms of what they mean for your organization, your users, and your budget.",
+    title: "Decisions explained plainly",
+    body: "Technical choices are explained in terms of what they mean for your organisation, your users and your budget.",
   },
   {
-    title: "We stay after launch",
-    body: "Most of our client relationships are ongoing. We maintain, support, and improve the systems we build.",
+    title: "Support after launch",
+    body: "Most of our client relationships continue after launch. We maintain, support and improve the software we build.",
   },
 ];
 
@@ -38,8 +38,8 @@ export default function AboutPage() {
     <>
       <PageHeader
         label="About"
-        title="A consulting business, not an agency of buzzwords."
-        description="TecHBK is a registered software development consulting business. We help organizations plan, build, improve, and maintain dependable software — from South Africa and the DRC to the world."
+        title="Founder-led and close to the work."
+        description="TecHBK is a software development consultancy led by Heritier Kaumbu. We work with organisations in South Africa, the DRC and elsewhere on new and existing software."
       />
 
       <section
@@ -83,7 +83,7 @@ export default function AboutPage() {
               id="about-cta"
               className="display-crop max-w-2xl font-display text-3xl font-bold uppercase tracking-tight sm:text-4xl"
             >
-              Talk to us about your system.
+              Tell us what you need help with.
             </h2>
             <div className="flex flex-wrap gap-3">
               <Button asChild size="lg">

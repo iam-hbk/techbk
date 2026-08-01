@@ -3,7 +3,7 @@ import { ImageResponse } from "next/og";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 export const alt =
-  "TecHBK — Software development consulting. From first decision to daily operation.";
+  "TecHBK. Software development consultancy for new builds, existing products and long-term maintenance.";
 
 export default function OpengraphImage() {
   return new ImageResponse(
@@ -35,10 +35,10 @@ export default function OpengraphImage() {
               textTransform: "uppercase",
             }}
           >
-            Software, from first decision to daily operation.
+            Software built for the way your organisation works.
           </span>
           <span style={{ fontSize: 26, color: "#AEB4BF" }}>
-            Software development consulting — South Africa / DRC / Global
+            Software development consultancy / South Africa / DRC / Global
           </span>
         </div>
         <div

@@ -34,7 +34,7 @@ export function SiteHeader() {
       <div className="mx-auto flex h-14 max-w-[1600px] items-center justify-between gap-4 px-4 sm:px-6 lg:px-10">
         <Link
           href="/"
-          aria-label="TecHBK — home"
+          aria-label="TecHBK home"
           className="outline-offset-4"
         >
           <TechBKLogo />

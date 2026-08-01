@@ -91,14 +91,13 @@ export function WhereWeEnter() {
               id="enter-heading"
               className="display-crop font-display text-4xl font-bold uppercase tracking-tight sm:text-5xl lg:text-6xl"
             >
-              We enter where the work needs us.
+              Start with what you have.
             </h2>
           </div>
           <p className="max-w-md text-base leading-relaxed text-ink/70 md:justify-self-end">
-            Whether you are defining a new product, improving an existing
-            platform, replacing a manual workflow, or maintaining production
-            software, we can contribute at that stage — and carry the work
-            forward.
+            Bring us an early idea, an existing product, a manual process or
+            software that needs attention. We will help you decide what to do
+            next and can stay through delivery.
           </p>
         </div>
       </div>

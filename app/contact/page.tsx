@@ -8,7 +8,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Start a project with TecHBK. Email info@techbk.dev or WhatsApp +27 64 244 8112. Currently available — remote and on-site.",
+    "Start a project with TecHBK. Email info@techbk.dev or WhatsApp +27 64 244 8112. Available for remote and on-site work.",
   alternates: { canonical: "/contact" },
 };
 
@@ -17,8 +17,8 @@ export default function ContactPage() {
     <>
       <PageHeader
         label="Contact"
-        title="What are you trying to build?"
-        description="Tell us what you are planning, what is not working, or where your current software needs help. We reply by email."
+        title="Tell us what needs work."
+        description="Tell us what you are planning or what is not working. We reply by email and help you find a sensible starting point."
       />
 
       <div className="bg-paper text-ink">
@@ -75,7 +75,7 @@ export default function ContactPage() {
                 </li>
                 <li className="flex gap-3">
                   <span className="label-tech tabular text-cobalt">03</span>
-                  We propose where the work should start.
+                  We suggest a practical first step.
                 </li>
               </ol>
             </div>
@@ -84,8 +84,8 @@ export default function ContactPage() {
           <div>
             <h2 className="label-tech text-cobalt">Or write it down here</h2>
             <p className="mt-4 mb-8 max-w-md text-base leading-relaxed text-ink/75">
-              This form opens your email client with the message pre-filled —
-              nothing is stored on this website.
+              This form opens your email client with the message pre-filled.
+              Nothing is stored on this website.
             </p>
             <ContactForm />
           </div>

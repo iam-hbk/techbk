@@ -95,19 +95,19 @@ export function ClimaxSection() {
             data-climax-line="1"
             className="block text-[9vw] md:text-[6.5vw]"
           >
-            From first decision.
+            Clear decisions.
           </span>
           <span
             data-climax-line="2"
             className="block text-[9vw] md:text-[6.5vw]"
           >
-            To working software.
+            Working software.
           </span>
           <span
             data-climax-line="3"
             className="block text-[9vw] text-white/60 md:text-[6.5vw]"
           >
-            To what comes next.
+            Support after launch.
           </span>
         </h2>
 
@@ -115,8 +115,8 @@ export function ClimaxSection() {
           data-climax-support
           className="mt-10 max-w-md text-lg leading-relaxed text-white/85"
         >
-          TecHBK does not stop at recommendations. We help plan, build,
-          launch, and maintain the system.
+          Our role can begin with a technical question and continue through
+          delivery, launch and maintenance.
         </p>
 
         <div

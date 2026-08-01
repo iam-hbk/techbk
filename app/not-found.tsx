@@ -8,11 +8,10 @@ export default function NotFound() {
       <div className="mx-auto w-full max-w-[1600px] px-4 pb-16 sm:px-6 lg:px-10">
         <p className="label-tech text-cobalt">404</p>
         <h1 className="display-crop mt-4 font-display text-[16vw] font-bold uppercase tracking-tight sm:text-[10vw]">
-          Off the path.
+          Page not found.
         </h1>
         <p className="mt-6 max-w-md text-lg leading-relaxed text-paper/75">
-          This page does not exist. The rest of the system is intact — pick a
-          direction below.
+          This page does not exist. Use one of the links below to keep browsing.
         </p>
         <div className="mt-10 flex flex-wrap gap-3">
           <Button asChild size="lg">

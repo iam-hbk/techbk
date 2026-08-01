@@ -8,7 +8,7 @@ import { useGsapScene } from "@/hooks/use-gsap";
 import { site } from "@/lib/site";
 
 const metadata = [
-  "Software development consulting",
+  "Software development consultancy",
   "Remote + on-site",
   "South Africa / DRC / Global",
   "Currently available",
@@ -113,13 +113,13 @@ export function HeroSection() {
             data-hero-line="2"
             className="block text-[6.5vw] tracking-tight text-structure sm:text-[5vw] lg:text-[4vw]"
           >
-            from first decision
+            built for the way
           </span>
           <span
             data-hero-line="3"
             className="block text-[6.5vw] tracking-tight text-structure sm:text-[5vw] lg:text-[4vw]"
           >
-            to daily operation.
+            your organisation works.
           </span>
         </h1>
 
@@ -128,8 +128,9 @@ export function HeroSection() {
           className="mt-10 flex flex-col gap-8 border-t border-white/10 pt-8 md:flex-row md:items-end md:justify-between"
         >
           <p className="max-w-md text-base leading-relaxed text-paper/80 sm:text-lg">
-            We help organizations plan, build, improve, and maintain dependable
-            software — from South Africa and the DRC to the world.
+            We design, build and maintain websites, platforms and internal
+            tools. Based in South Africa and the DRC, we work with clients
+            wherever they are.
           </p>
           <div className="flex flex-wrap items-center gap-3">
             <Button asChild size="lg">

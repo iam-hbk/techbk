@@ -62,12 +62,12 @@ export function ProcessSection() {
               id="process-heading"
               className="display-crop font-display text-4xl font-bold uppercase tracking-tight sm:text-5xl lg:text-6xl"
             >
-              How a project moves.
+              How we work.
             </h2>
           </div>
           <p className="max-w-md text-base leading-relaxed text-ink/70 md:justify-self-end">
-            The same sequence, whether we are building something new or
-            taking over something live.
+            Each project is different. We begin by understanding the problem,
+            agree on the work and deliver it in reviewable steps.
           </p>
         </div>
 

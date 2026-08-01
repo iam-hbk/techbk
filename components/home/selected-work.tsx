@@ -22,12 +22,13 @@ export function SelectedWork() {
               id="work-heading"
               className="display-crop font-display text-4xl font-bold uppercase tracking-tight sm:text-5xl lg:text-6xl"
             >
-              Systems in daily operation.
+              Work our clients use.
             </h2>
           </div>
           <p className="max-w-md text-base leading-relaxed text-paper/70 md:justify-self-end">
-            Client-approved work across energy, recruitment, architecture,
-            construction, nonprofit, retail supply, and higher education.
+            Client-approved work for organisations in energy, recruitment,
+            architecture, construction, security, the non-profit sector,
+            retail and higher education.
           </p>
         </div>
 

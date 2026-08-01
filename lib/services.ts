@@ -12,10 +12,10 @@ export const services: Service[] = [
     slug: "discovery-and-strategy",
     title: "Discovery and Strategy",
     summary:
-      "Make sense of the problem before committing to a solution. We turn goals, constraints, and unknowns into a plan that can be built against.",
+      "Before anyone starts building, we clarify the problem, the people involved and the constraints. You get agreed requirements and a practical delivery plan.",
     items: [
       "Business and technical discovery",
-      "Requirement definition",
+      "Requirements definition",
       "Product planning",
       "Technical audits",
       "Architecture direction",
@@ -28,7 +28,7 @@ export const services: Service[] = [
     slug: "product-and-experience-design",
     title: "Product and Experience Design",
     summary:
-      "Decide how the system should work before it is built. We make workflows, structures, and interfaces visible early, when change is still cheap.",
+      "See how the product will work before development begins. We map the main journeys, test the structure and design the interfaces while changes are still inexpensive.",
     items: [
       "User flows",
       "Information architecture",
@@ -44,7 +44,7 @@ export const services: Service[] = [
     slug: "software-development",
     title: "Software Development",
     summary:
-      "Design and build the working system — from public websites to internal platforms, backend services, and bespoke software.",
+      "We build public websites, web applications, internal tools and the services behind them. You see working software throughout the project, not only at the end.",
     items: [
       "Marketing and corporate websites",
       "Web applications",
@@ -62,13 +62,13 @@ export const services: Service[] = [
     slug: "infrastructure-and-delivery",
     title: "Infrastructure and Delivery",
     summary:
-      "Get the system into production and keep it predictable. We set up the environments, pipelines, and monitoring that dependable software needs.",
+      "We set up hosting, deployments and monitoring so releases are repeatable and problems are easier to spot.",
     items: [
       "Cloud infrastructure",
       "Deployment workflows",
       "CI/CD",
       "Environment configuration",
-      "Performance optimization",
+      "Performance optimisation",
       "Monitoring and operational readiness",
     ],
   },
@@ -77,7 +77,7 @@ export const services: Service[] = [
     slug: "improvement-and-maintenance",
     title: "Improvement and Maintenance",
     summary:
-      "Stay responsible after launch. We maintain, support, and evolve live systems so they keep working as the organization changes.",
+      "Live software needs regular attention. We fix problems, ship improvements and keep products useful as the organisation changes.",
     items: [
       "Ongoing website and application maintenance",
       "Feature development",
@@ -92,13 +92,13 @@ export const services: Service[] = [
 ];
 
 export const entryStates = [
-  "Just an idea",
-  "Unclear requirements",
+  "An early idea",
+  "Requirements to clarify",
   "Existing software",
-  "Manual operations",
-  "A system that will not scale",
+  "A manual process",
+  "Software that will not scale",
   "A product ready to build",
-  "A platform needing maintenance",
+  "A platform that needs maintenance",
 ] as const;
 
 export const lifecycleStages = [

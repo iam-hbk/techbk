@@ -49,10 +49,10 @@ export function ContactForm() {
     }
 
     const subject = encodeURIComponent(
-      `New project inquiry — ${organization || name}`
+      `New project enquiry: ${organization || name}`
     );
     const body = encodeURIComponent(
-      `Name: ${name}\nEmail: ${email}\nOrganization: ${organization || "—"}\n\n${message}`
+      `Name: ${name}\nEmail: ${email}\nOrganisation: ${organization || "Not provided"}\n\n${message}`
     );
     window.location.href = `mailto:${site.email}?subject=${subject}&body=${body}`;
     toast.success("Opening your email client.", {
@@ -97,13 +97,13 @@ export function ContactForm() {
         </Field>
 
         <Field>
-          <FieldLabel htmlFor="organization">Organization (optional)</FieldLabel>
+          <FieldLabel htmlFor="organization">Organisation (optional)</FieldLabel>
           <Input id="organization" name="organization" autoComplete="organization" />
         </Field>
 
         <Field data-invalid={Boolean(errors.message) || undefined}>
           <FieldLabel htmlFor="message">
-            What are you trying to build?
+            What needs work?
           </FieldLabel>
           <Textarea
             id="message"
@@ -118,8 +118,7 @@ export function ContactForm() {
             </FieldDescription>
           ) : (
             <FieldDescription id="message-hint">
-              What is planned, what is not working, or where your current
-              software needs help.
+              Tell us what you are planning or what is not working.
             </FieldDescription>
           )}
         </Field>
@@ -131,7 +130,7 @@ export function ContactForm() {
             onCheckedChange={(v) => setConsent(v === true)}
           />
           <FieldLabel htmlFor="consent" className="font-normal">
-            TecHBK may reply to me about this inquiry.
+            TecHBK may reply to me about this enquiry.
           </FieldLabel>
         </Field>
 

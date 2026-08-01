@@ -13,13 +13,13 @@ const sections = [
     title: "What we collect",
     body: [
       "This website does not use analytics trackers, advertising cookies, or account systems. We do not collect personal information passively.",
-      "If you contact us by email or WhatsApp, we receive the information you choose to send: typically your name, email address, organization, and project details.",
+      "If you contact us by email or WhatsApp, we receive the information you choose to send: typically your name, email address, organisation and project details.",
     ],
   },
   {
     title: "How we use it",
     body: [
-      "We use the information you send us only to respond to your inquiry and, if the conversation continues, to prepare and deliver consulting work.",
+      "We use the information you send us only to respond to your enquiry and, if the conversation continues, to prepare and deliver consulting work.",
       "We do not sell, rent, or share your personal information with third parties for marketing purposes.",
     ],
   },

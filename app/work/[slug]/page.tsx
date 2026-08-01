@@ -21,11 +21,11 @@ export async function generateMetadata({
   const study = getCaseStudy(slug);
   if (!study) return {};
   return {
-    title: `${study.name} — Case Study`,
+    title: `${study.name} | Case Study`,
     description: study.summary,
     alternates: { canonical: `/work/${study.slug}` },
     openGraph: {
-      title: `${study.name} — TecHBK case study`,
+      title: `${study.name} | TecHBK case study`,
       description: study.summary,
       images: [study.image],
     },
@@ -112,7 +112,7 @@ export default async function CaseStudyPage({
           />
         </div>
         <p className="label-tech mt-3 text-ink/50">
-          Public website — {study.urlLabel}
+          Project link: {study.urlLabel}
         </p>
       </div>
 
@@ -158,7 +158,7 @@ export default async function CaseStudyPage({
               id="cs-context"
               className="font-display text-2xl font-bold uppercase tracking-tight sm:text-3xl"
             >
-              The organization
+              The organisation
             </h2>
             <p className="mt-4 text-base leading-relaxed text-ink/80">
               {study.context}
@@ -170,7 +170,7 @@ export default async function CaseStudyPage({
               id="cs-features"
               className="font-display text-2xl font-bold uppercase tracking-tight sm:text-3xl"
             >
-              What the public system does
+              What it does
             </h2>
             <ul className="mt-6 flex flex-col gap-3">
               {study.features.map((f) => (

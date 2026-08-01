@@ -37,11 +37,10 @@ export function FounderSection() {
             Founder &amp; Lead Consultant
           </p>
           <p className="max-w-xl text-lg leading-relaxed text-ink/80">
-            Heritier Kaumbu is the founder and lead consultant at TecHBK. His
-            work spans frontend engineering, backend development, data
-            systems, cloud delivery, technical consulting, and the development
-            of software used in commercial, nonprofit, recruitment, energy,
-            architectural, and academic environments.
+            Heritier Kaumbu founded TecHBK and leads its client work. He works
+            across frontend and backend development, data, cloud infrastructure
+            and technical consulting. His software is used by businesses,
+            non-profit organisations and academic teams.
           </p>
           <ul className="flex flex-wrap gap-x-8 gap-y-3 pt-2">
             <li>
