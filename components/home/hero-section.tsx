@@ -1,22 +1,14 @@
 "use client";
 
-import Link from "next/link";
-import { IconArrowUpRight } from "@tabler/icons-react";
-import { Button } from "@/components/ui/button";
 import { gsap } from "@/components/lenis-provider";
 import { useGsapScene } from "@/hooks/use-gsap";
-import { site } from "@/lib/site";
 
-const metadata = [
-  "Software development consultancy",
-  "Remote + on-site",
-  "South Africa / DRC / Global",
-  "Currently available",
-];
+const heroVideo =
+  "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260405_170732_8a9ccda6-5cff-4628-b164-059c500a2b41.mp4";
 
 /**
- * 01 — HERO. Ink. The system line underlines the headline, then bends
- * down and out of the viewport to become the next scene's diagnostic path.
+ * 01 - HERO. A moving system backdrop sits behind the existing TecHBK
+ * message, keeping the ink/cobalt/paper palette and scroll choreography.
  */
 export function HeroSection() {
   const ref = useGsapScene<HTMLElement>((_ctx, scope) => {
@@ -34,16 +26,16 @@ export function HeroSection() {
       .to("[data-hero-line='3']", { xPercent: 110, ease: "none" }, 0)
       .to("[data-hero-line='1']", { xPercent: -8, ease: "none" }, 0)
       .to("[data-hero-path]", { strokeDashoffset: 0, ease: "none" }, 0)
-      .to("[data-hero-meta]", { yPercent: -60, opacity: 0, ease: "none" }, 0)
+      .to("[data-hero-media]", { scale: 1.08, opacity: 0.68, ease: "none" }, 0)
       .to("[data-hero-support]", { yPercent: -40, opacity: 0, ease: "none" }, 0);
 
-    // Entrance: metadata clipped reveal after the loader lifts.
-    gsap.from("[data-hero-meta-item]", {
-      yPercent: 120,
-      duration: 0.7,
-      ease: "power2.out",
-      stagger: 0.06,
-      delay: 0.9,
+    gsap.from("[data-hero-line]", {
+      yPercent: 18,
+      opacity: 0,
+      duration: 0.9,
+      ease: "power3.out",
+      stagger: 0.08,
+      delay: 0.25,
     });
   });
 
@@ -54,29 +46,23 @@ export function HeroSection() {
       aria-labelledby="hero-heading"
       className="relative flex min-h-[92svh] flex-col justify-end overflow-hidden bg-ink pt-14 text-paper md:min-h-svh"
     >
-      {/* Metadata */}
-      <div
-        data-hero-meta
-        className="absolute inset-x-0 top-14 px-4 pt-6 sm:px-6 lg:px-10"
-      >
-        <ul className="flex flex-wrap gap-x-8 gap-y-2" aria-label="Company facts">
-          {metadata.map((item) => (
-            <li key={item} className="overflow-hidden">
-              <span
-                data-hero-meta-item
-                className="label-tech block text-structure"
-              >
-                {item}
-              </span>
-            </li>
-          ))}
-        </ul>
-      </div>
-
-      {/* System line: underline → decision bend → exit path (desktop) */}
+      <div data-hero-media aria-hidden="true" className="absolute inset-0">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="metadata"
+          className="h-full w-full translate-x-[3%] scale-[1.08] object-cover opacity-85 saturate-100"
+          src={heroVideo}
+        />
+        <div className="absolute inset-0 bg-ink/35" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_18%,rgba(40,85,245,0.26),transparent_38%),linear-gradient(180deg,rgba(8,11,18,0.06),rgba(8,11,18,0.58))]" />
+        <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-ink/70 to-transparent" />
+      </div>{/* System line: underline -> decision bend -> exit path (desktop) */}
       <svg
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 hidden h-full w-full md:block"
+        className="pointer-events-none absolute inset-0 z-10 hidden h-full w-full md:block"
         viewBox="0 0 1000 600"
         preserveAspectRatio="none"
       >
@@ -93,14 +79,14 @@ export function HeroSection() {
         />
       </svg>
 
-      <div className="relative mx-auto w-full max-w-[1600px] px-4 pb-10 sm:px-6 sm:pb-14 lg:px-10">
+      <div className="relative z-10 mx-auto w-full max-w-[1600px] px-4 pb-10 sm:px-6 sm:pb-14 lg:px-10">
         <h1
           id="hero-heading"
-          className="display-crop font-display font-bold uppercase"
+          className="display-crop font-display font-bold uppercase text-paper drop-shadow-[0_1rem_2.5rem_rgba(0,0,0,0.32)]"
         >
           <span
             data-hero-line="1"
-            className="block text-[13.5vw] tracking-tight sm:text-[11vw] lg:text-[9vw]"
+            className="block text-4xl sm:text-6xl lg:text-7xl xl:text-8xl"
           >
             Software,
           </span>
@@ -111,13 +97,13 @@ export function HeroSection() {
           />
           <span
             data-hero-line="2"
-            className="block text-[6.5vw] tracking-tight text-structure sm:text-[5vw] lg:text-[4vw]"
+            className="block text-2xl text-structure lg:text-3xl xl:text-4xl"
           >
             built for the way
           </span>
           <span
             data-hero-line="3"
-            className="block text-[6.5vw] tracking-tight text-structure sm:text-[5vw] lg:text-[4vw]"
+            className="block text-2xl text-structure lg:text-3xl xl:text-4xl"
           >
             your organisation works.
           </span>
@@ -125,29 +111,13 @@ export function HeroSection() {
 
         <div
           data-hero-support
-          className="mt-10 flex flex-col gap-8 border-t border-white/10 pt-8 md:flex-row md:items-end md:justify-between"
+          className="mt-10 border-t border-white/15 pt-8"
         >
-          <p className="max-w-md text-base leading-relaxed text-paper/80 sm:text-lg">
+          <p className="max-w-md text-base leading-relaxed text-paper/85 sm:text-lg">
             We design, build and maintain websites, platforms and internal
             tools. Based in South Africa and the DRC, we work with clients
             wherever they are.
           </p>
-          <div className="flex flex-wrap items-center gap-3">
-            <Button asChild size="lg">
-              <a href={site.emailHref}>
-                Email us
-                <IconArrowUpRight data-icon="inline-end" />
-              </a>
-            </Button>
-            <Button
-              asChild
-              size="lg"
-              variant="outline"
-              className="border-white/20 bg-transparent text-paper hover:bg-white/10 hover:text-paper"
-            >
-              <Link href="/work">View our work</Link>
-            </Button>
-          </div>
         </div>
       </div>
     </section>
