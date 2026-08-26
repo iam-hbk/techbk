@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useState } from "react";
 
 import { gsap } from "@/components/lenis-provider";
 import { useGsapScene } from "@/hooks/use-gsap";
@@ -15,9 +14,6 @@ const heroPoster = "/assets/hero-poster.jpg";
  * message, keeping the ink/cobalt/paper palette and scroll choreography.
  */
 export function HeroSection() {
-  const [canPlayVideo, setCanPlayVideo] = useState(false);
-  const [shouldLoadVideo, setShouldLoadVideo] = useState(false);
-
   const ref = useGsapScene<HTMLElement>((_ctx, scope) => {
     // Scroll-driven exit: secondary words leave the viewport in opposite
     // directions; "SOFTWARE," remains as the transition anchor.
@@ -46,23 +42,6 @@ export function HeroSection() {
     });
   });
 
-  useEffect(() => {
-    const mediaQuery = window.matchMedia(
-      "(prefers-reduced-motion: no-preference)",
-    );
-    const updateVideoPreference = () => {
-      setShouldLoadVideo(mediaQuery.matches);
-      setCanPlayVideo(false);
-    };
-
-    updateVideoPreference();
-    mediaQuery.addEventListener("change", updateVideoPreference);
-
-    return () => {
-      mediaQuery.removeEventListener("change", updateVideoPreference);
-    };
-  }, []);
-
   return (
     <section
       ref={ref}
@@ -79,21 +58,16 @@ export function HeroSection() {
           sizes="100vw"
           className="translate-x-[3%] scale-[1.08] object-cover opacity-85 saturate-100"
         />
-        {shouldLoadVideo ? (
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            preload="none"
-            poster={heroPoster}
-            onCanPlay={() => setCanPlayVideo(true)}
-            className={`absolute inset-0 h-full w-full translate-x-[3%] scale-[1.08] object-cover saturate-100 transition-opacity duration-700 ${
-              canPlayVideo ? "opacity-85" : "opacity-0"
-            }`}
-            src={heroVideo}
-          />
-        ) : null}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="metadata"
+          poster={heroPoster}
+          className="absolute inset-0 h-full w-full translate-x-[3%] scale-[1.08] object-cover opacity-85 saturate-100 motion-reduce:hidden"
+          src={heroVideo}
+        />
         <div className="absolute inset-0 bg-ink/35" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_18%,rgba(40,85,245,0.26),transparent_38%),linear-gradient(180deg,rgba(8,11,18,0.06),rgba(8,11,18,0.58))]" />
         <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-ink/70 to-transparent" />
