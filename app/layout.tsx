@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Archivo, Instrument_Sans, IBM_Plex_Mono } from "next/font/google";
+import { IBM_Plex_Mono, Urbanist } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { site } from "@/lib/site";
@@ -8,15 +8,16 @@ import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { Toaster } from "@/components/ui/sonner";
 
-const display = Archivo({
+const display = Urbanist({
   subsets: ["latin"],
   variable: "--font-display",
-  axes: ["wdth"],
+  display: "swap",
 });
 
-const sans = Instrument_Sans({
+const sans = Urbanist({
   subsets: ["latin"],
   variable: "--font-sans",
+  display: "swap",
 });
 
 const mono = IBM_Plex_Mono({
