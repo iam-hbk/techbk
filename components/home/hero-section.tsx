@@ -1,16 +1,23 @@
 "use client";
 
+import Image from "next/image";
+import { useEffect, useState } from "react";
+
 import { gsap } from "@/components/lenis-provider";
 import { useGsapScene } from "@/hooks/use-gsap";
 
 const heroVideo =
   "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260405_170732_8a9ccda6-5cff-4628-b164-059c500a2b41.mp4";
+const heroPoster = "/assets/hero-poster.jpg";
 
 /**
  * 01 - HERO. A moving system backdrop sits behind the existing TecHBK
  * message, keeping the ink/cobalt/paper palette and scroll choreography.
  */
 export function HeroSection() {
+  const [canPlayVideo, setCanPlayVideo] = useState(false);
+  const [shouldLoadVideo, setShouldLoadVideo] = useState(false);
+
   const ref = useGsapScene<HTMLElement>((_ctx, scope) => {
     // Scroll-driven exit: secondary words leave the viewport in opposite
     // directions; "SOFTWARE," remains as the transition anchor.
@@ -39,6 +46,23 @@ export function HeroSection() {
     });
   });
 
+  useEffect(() => {
+    const mediaQuery = window.matchMedia(
+      "(min-width: 768px) and (prefers-reduced-motion: no-preference)",
+    );
+    const updateVideoPreference = () => {
+      setShouldLoadVideo(mediaQuery.matches);
+      setCanPlayVideo(false);
+    };
+
+    updateVideoPreference();
+    mediaQuery.addEventListener("change", updateVideoPreference);
+
+    return () => {
+      mediaQuery.removeEventListener("change", updateVideoPreference);
+    };
+  }, []);
+
   return (
     <section
       ref={ref}
@@ -47,15 +71,29 @@ export function HeroSection() {
       className="relative flex min-h-[92svh] flex-col justify-end overflow-hidden bg-ink pt-14 text-paper md:min-h-svh"
     >
       <div data-hero-media aria-hidden="true" className="absolute inset-0">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          preload="metadata"
-          className="h-full w-full translate-x-[3%] scale-[1.08] object-cover opacity-85 saturate-100"
-          src={heroVideo}
+        <Image
+          src={heroPoster}
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="translate-x-[3%] scale-[1.08] object-cover opacity-85 saturate-100"
         />
+        {shouldLoadVideo ? (
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="none"
+            poster={heroPoster}
+            onCanPlay={() => setCanPlayVideo(true)}
+            className={`absolute inset-0 h-full w-full translate-x-[3%] scale-[1.08] object-cover saturate-100 transition-opacity duration-700 ${
+              canPlayVideo ? "opacity-85" : "opacity-0"
+            }`}
+            src={heroVideo}
+          />
+        ) : null}
         <div className="absolute inset-0 bg-ink/35" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_18%,rgba(40,85,245,0.26),transparent_38%),linear-gradient(180deg,rgba(8,11,18,0.06),rgba(8,11,18,0.58))]" />
         <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-ink/70 to-transparent" />
