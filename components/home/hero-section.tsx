@@ -48,7 +48,7 @@ export function HeroSection() {
 
   useEffect(() => {
     const mediaQuery = window.matchMedia(
-      "(min-width: 768px) and (prefers-reduced-motion: no-preference)",
+      "(prefers-reduced-motion: no-preference)",
     );
     const updateVideoPreference = () => {
       setShouldLoadVideo(mediaQuery.matches);
