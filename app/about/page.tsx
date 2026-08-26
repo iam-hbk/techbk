@@ -1,11 +1,6 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import { IconArrowUpRight } from "@tabler/icons-react";
-import { Button } from "@/components/ui/button";
-import { Separator } from "@/components/ui/separator";
 import { PageHeader } from "@/components/page-header";
 import { FounderSection } from "@/components/home/founder-section";
-import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "About",
@@ -74,31 +69,6 @@ export default function AboutPage() {
       </section>
 
       <FounderSection />
-
-      <section aria-labelledby="about-cta" className="bg-paper text-ink">
-        <div className="mx-auto max-w-[1600px] px-4 pb-24 sm:px-6 lg:px-10">
-          <Separator className="mb-12" />
-          <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
-            <h2
-              id="about-cta"
-              className="display-crop max-w-2xl font-display text-3xl font-bold uppercase tracking-tight sm:text-4xl"
-            >
-              Tell us what you need help with.
-            </h2>
-            <div className="flex flex-wrap gap-3">
-              <Button asChild size="lg">
-                <a href={site.emailHref}>
-                  Email us
-                  <IconArrowUpRight data-icon="inline-end" />
-                </a>
-              </Button>
-              <Button asChild size="lg" variant="outline">
-                <Link href="/contact">Contact details</Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
     </>
   );
 }
