@@ -6,15 +6,24 @@ import { caseStudies } from "@/lib/work";
 const featured = caseStudies.slice(0, 4);
 
 /**
- * 04 — SELECTED WORK. Navy. Editorial case-study entries, not cards.
+ * 04 — SELECTED WORK. Navy. Case studies in subtle structure-grey glass.
  */
 export function SelectedWork() {
   return (
     <section
       aria-labelledby="work-heading"
-      className="bg-navy py-24 text-paper lg:py-32"
+      className="relative bg-navy py-24 text-paper lg:py-32"
     >
-      <div className="mx-auto max-w-[1600px] px-4 sm:px-6 lg:px-10">
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-x-0 -top-32 h-32 bg-[linear-gradient(to_bottom,rgba(242,243,246,0)_0%,rgba(40,85,245,0.1)_35%,rgba(2,22,93,0.55)_72%,#02165d_100%)]"
+      />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -top-20 left-[-5%] h-24 w-[110%] bg-cobalt/12 blur-2xl"
+      />
+
+      <div className="relative z-10 mx-auto max-w-[1600px] px-4 sm:px-6 lg:px-10">
         <div className="grid gap-6 md:grid-cols-2 md:items-end">
           <div className="flex flex-col gap-4">
             <p className="label-tech text-structure">04 / Selected work</p>
@@ -36,7 +45,7 @@ export function SelectedWork() {
           {featured.map((study, i) => (
             <li
               key={study.slug}
-              className="grid items-center gap-8 lg:grid-cols-2 lg:gap-14"
+              className="grid items-center gap-8 rounded-[2rem] border border-white/20 bg-[linear-gradient(135deg,rgba(174,180,191,0.2),rgba(174,180,191,0.06))] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.16),0_28px_70px_-36px_rgba(0,0,0,0.8)] backdrop-blur-2xl sm:p-7 lg:grid-cols-2 lg:gap-14 lg:p-9"
             >
               <Link
                 href={`/work/${study.slug}`}
@@ -44,7 +53,7 @@ export function SelectedWork() {
                 tabIndex={-1}
                 aria-hidden="true"
               >
-                <div className="overflow-hidden border border-white/15">
+                <div className="overflow-hidden rounded-[1.4rem] border border-white/15">
                   <Image
                     src={study.image}
                     alt=""
@@ -77,7 +86,7 @@ export function SelectedWork() {
                   {study.scope.map((s) => (
                     <li
                       key={s}
-                      className="label-tech border border-white/20 px-2.5 py-1.5 text-paper/80"
+                      className="rounded-full border border-white/20 px-4 py-2 font-sans text-xs font-bold uppercase text-paper/90"
                     >
                       {s}
                     </li>
@@ -97,7 +106,7 @@ export function SelectedWork() {
 
         <Link
           href="/work"
-          className="label-tech mt-16 inline-flex min-h-11 items-center gap-2 text-cobalt outline-offset-4 hover:underline"
+          className="mt-16 inline-flex min-h-11 items-center gap-2 rounded-full border border-white/25 bg-[linear-gradient(135deg,rgba(174,180,191,0.24),rgba(174,180,191,0.1))] px-5 py-3 font-sans text-sm font-bold uppercase text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.2),0_18px_40px_-24px_rgba(0,0,0,0.85)] backdrop-blur-xl outline-offset-4 transition-colors hover:bg-white/15"
         >
           All {caseStudies.length} case studies
           <IconArrowUpRight className="size-4" aria-hidden="true" />

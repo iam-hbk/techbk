@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 
 export default function ServicesPage() {
   return (
-    <>
+    <div className="font-sans [&_.label-tech]:font-sans">
       <PageHeader
         label="Services"
         title="Choose the help you need."
@@ -81,19 +81,19 @@ export default function ServicesPage() {
               </p>
             </div>
             <div className="flex flex-wrap gap-3">
-              <Button asChild size="lg">
+              <Button asChild size="lg" className="rounded-full px-6 font-sans">
                 <a href={site.emailHref}>
                   Email us
                   <IconArrowUpRight data-icon="inline-end" />
                 </a>
               </Button>
-              <Button asChild size="lg" variant="outline">
+              <Button asChild size="lg" variant="outline" className="rounded-full px-6 font-sans">
                 <Link href="/work">View our work</Link>
               </Button>
             </div>
           </div>
         </section>
       </div>
-    </>
+    </div>
   );
 }

@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
 export default function WorkPage() {
   return (
-    <>
+    <div className="font-sans [&_.label-tech]:font-sans [&_.label-tech]:font-bold">
       <PageHeader
         label="Work"
         title="Selected client work."
@@ -68,7 +68,7 @@ export default function WorkPage() {
                   {study.scope.map((s) => (
                     <li
                       key={s}
-                      className="label-tech border border-ink/20 px-2.5 py-1.5 text-ink/75"
+                      className="rounded-full border border-ink/25 px-4 py-2 font-sans text-xs font-bold uppercase text-ink"
                     >
                       {s}
                     </li>
@@ -86,6 +86,6 @@ export default function WorkPage() {
           ))}
         </ol>
       </div>
-    </>
+    </div>
   );
 }

@@ -30,7 +30,7 @@ function ServiceOutputs({
           <li
             key={highlight}
             className={cn(
-              "label-tech border px-3 py-2",
+              "rounded-full border px-4 py-2 font-sans text-xs font-bold uppercase",
               inverted
                 ? "border-white/20 text-paper/80"
                 : "border-ink/20 text-ink/75"
