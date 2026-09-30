@@ -272,6 +272,28 @@ export const caseStudies: CaseStudy[] = [
     image: "/assets/work/newquinastra.jpeg",
     imageAlt: "New Quin Astra website homepage",
   },
+  {
+    slug: "kpk-petroleum",
+    name: "KPK Petroleum",
+    industry: "Fuel supply — petrol and diesel across the DRC",
+    url: "https://www.kpkpetroleum.com",
+    urlLabel: "kpkpetroleum.com",
+    summary:
+      "A bilingual French and English website for KPK Petroleum, presenting its petrol and diesel supply across the DRC, its pickup and delivery options and its business purchase terms, with enquiries through WhatsApp and email.",
+    scope: ["Public website", "French and English content"],
+    context:
+      "KPK Petroleum supplies petrol and diesel to individuals, businesses and institutions across the Democratic Republic of the Congo, with pickup in Kamina and delivery to client sites. The website needed to explain how supply works and route orders to its sales team.",
+    features: [
+      "Petrol and diesel supply information",
+      "Pickup in Kamina and delivery across the DRC",
+      "Business credit and prepaid fuel options",
+      "Step-by-step ordering process and frequently asked questions",
+      "French and English versions of the site",
+      "WhatsApp and sales email enquiries",
+    ],
+    image: "/assets/work/kpk-petroleum.jpeg",
+    imageAlt: "KPK Petroleum website homepage",
+  },
 ];
 
 export function getCaseStudy(slug: string) {
