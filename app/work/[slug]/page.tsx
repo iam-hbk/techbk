@@ -144,12 +144,14 @@ export default async function CaseStudyPage({
               </ul>
             </div>
           ) : null}
-          <div>
-            <h2 className="label-tech text-cobalt">Relationship</h2>
-            <p className="mt-4 max-w-xs text-base leading-relaxed text-ink/75">
-              {study.maintenance}
-            </p>
-          </div>
+          {study.maintenance ? (
+            <div>
+              <h2 className="label-tech text-cobalt">Relationship</h2>
+              <p className="mt-4 max-w-xs text-base leading-relaxed text-ink/75">
+                {study.maintenance}
+              </p>
+            </div>
+          ) : null}
         </aside>
 
         <div className="flex max-w-3xl flex-col gap-14">

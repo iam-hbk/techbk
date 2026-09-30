@@ -9,7 +9,7 @@ export type CaseStudy = {
   context: string;
   features: string[];
   technology?: string[];
-  maintenance: string;
+  maintenance?: string;
   image: string;
   imageAlt: string;
 };
@@ -229,6 +229,48 @@ export const caseStudies: CaseStudy[] = [
     maintenance: "We continue to maintain the Zoera Jewellery website.",
     image: "/assets/work/zoera.jpeg",
     imageAlt: "Zoera Jewellery website homepage",
+  },
+  {
+    slug: "scent-by-bnice",
+    name: "Scent by B'Nice",
+    industry: "Home fragrance retail",
+    url: "https://www.scentsbybnice.co.za",
+    urlLabel: "scentsbybnice.co.za",
+    summary:
+      "A product website for Scent by B'Nice, presenting its candles, room sprays and diffusers, fragrance range and gift sets, with prices in rands and ordering through WhatsApp.",
+    scope: ["Public website", "Product catalogue"],
+    context:
+      "Scent by B'Nice makes candles, room sprays, room diffusers and car diffusers in fragrances such as Amber, French Lavender and Freesia. The website needed to present the collection and gift sets clearly and make it easy for customers to get in touch to order.",
+    features: [
+      "Product catalogue with prices in ZAR",
+      "Fragrance guide across the scent range",
+      "Gift set presentation and enquiries",
+      "Scent by B'Nice brand story",
+      "Contact and ordering through WhatsApp",
+    ],
+    image: "/assets/work/scents-by-bnice.jpeg",
+    imageAlt: "Scent by B'Nice website homepage",
+  },
+  {
+    slug: "new-quin-astra",
+    name: "New Quin Astra",
+    industry: "Industrial supply and transport",
+    url: "https://www.newquinastra.com",
+    urlLabel: "newquinastra.com",
+    summary:
+      "A bilingual English and French website for New Quin Astra, presenting its steel, hardware, mining and safety supply and its regional transport services across Central and East Africa.",
+    scope: ["Public website", "English and French content"],
+    context:
+      "Founded in 2000, New Quin Astra is a distributor and transporter serving steel, hardware, mining and related markets, with headquarters in Lubumbashi and a branch in Dar es Salaam. The website needed to present its product range and transport capability to customers across the region and route enquiries to its sales team.",
+    features: [
+      "Steel plate and pipe, hardware and consumables, and mining and safety supply ranges",
+      "Air, sea and land transport services",
+      "Company history, principles and compliance commitments",
+      "English and French versions of the site",
+      "Sales enquiry, call and email options for both offices",
+    ],
+    image: "/assets/work/newquinastra.jpeg",
+    imageAlt: "New Quin Astra website homepage",
   },
 ];
 
