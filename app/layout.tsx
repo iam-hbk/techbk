@@ -7,6 +7,7 @@ import { LenisProvider } from "@/components/lenis-provider";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { Toaster } from "@/components/ui/sonner";
+import { Analytics } from "@vercel/analytics/next";
 
 const display = Urbanist({
   subsets: ["latin"],
@@ -126,6 +127,7 @@ export default function RootLayout({
           <SiteFooter />
         </LenisProvider>
         <Toaster />
+        <Analytics />
       </body>
     </html>
   );
