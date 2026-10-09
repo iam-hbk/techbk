@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 import {
   IconBrandGithub,
   IconCheck,
@@ -14,7 +13,7 @@ import { site } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
 /**
- * 06 - FOUNDER. Paper. Glass profile card, portrait, role, verified
+ * 06 - FOUNDER. Paper. Glass profile card, role, verified
  * biography, links, and direct contact actions.
  */
 export function FounderSection() {
@@ -50,17 +49,6 @@ export function FounderSection() {
 
           <div className="relative z-10 overflow-hidden rounded-[2rem] border border-ink/15 bg-white/55 p-5 shadow-2xl shadow-ink/10 backdrop-blur-xl sm:p-6">
             <div className="flex flex-col items-center gap-5 text-center">
-              <div className="relative aspect-square w-full max-w-[16rem] overflow-hidden rounded-[1.4rem] border border-ink/10 bg-ink/5 sm:max-w-[18rem]">
-                <Image
-                  src={site.founder.portrait}
-                  alt={`Portrait of ${site.founder.name}, ${site.founder.role} at TecHBK`}
-                  fill
-                  sizes="(min-width: 1024px) 288px, 70vw"
-                  className="object-cover object-top"
-                  priority={false}
-                />
-              </div>
-
               <div className="min-w-0">
                 <h2
                   id="founder-heading"
