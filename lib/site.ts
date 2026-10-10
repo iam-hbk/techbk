@@ -20,7 +20,6 @@ export const site = {
     github: "https://github.com/iam-hbk",
     resume:
       "https://vbeidqt5tvyy2ydf.public.blob.vercel-storage.com/CVs/Heritier%20Kaumbu%20CV-GQADoYbw2SafzlDvocteedsbRC8OsZ.pdf",
-    portrait: "/assets/Profile.png",
   },
 } as const;
 
